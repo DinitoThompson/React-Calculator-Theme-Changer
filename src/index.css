@@ -1,0 +1,214 @@
+:root {
+  --primary: #1d3ffa;
+  --secondary: #8c38ff;
+  --dark: #131a26;
+  --light: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: var(--light);
+}
+
+.Light {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: var(--light);
+  transition: 1s;
+}
+
+.Dark {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: rgb(53, 51, 68);
+  transition: 1s;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  background-color: var(--dark);
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.header p {
+  padding: 2rem;
+}
+
+.header .button__theme {
+  background-color: var(--light);
+  color: var(--dark);
+  background: transparent;
+  border-radius: 30px;
+  margin: 10px;
+  display: flex;
+  color: var(--light);
+  font-size: 1rem;
+}
+
+button.button__theme.dark:hover {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 1s;
+}
+
+button.button__theme.light:hover {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 1s;
+}
+
+.header p {
+  color: white;
+  font-size: xx-large;
+}
+
+.color__controller {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0.2rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  gap: 0.8rem;
+  backdrop-filter: blur(15px);
+  bottom: 0%;
+}
+
+.color__controller button {
+  background: transparent;
+  padding: 0.9rem;
+  margin: 10px;
+  border-radius: 0.5rem;
+  display: flex;
+  color: var(--light);
+  font-size: 1.5rem;
+}
+
+.color__controller button:hover {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 1.5s;
+}
+
+.color__controller .button__aqua:hover {
+  background-color: aqua;
+  color: var(--dark);
+}
+
+.color__controller .button__red:hover {
+  background-color: red;
+  color: var(--light);
+}
+
+.color__controller .button__purple:hover {
+  background-color: purple;
+  color: var(--light);
+}
+
+.color__controller .button__green:hover {
+  background-color: green;
+  color: var(--light);
+}
+
+.color__controller .button__default:hover {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px, 2px, 64px, rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.display span {
+  font-size: 15px;
+  color: #888;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operators {
+  display: flex;
+}
+
+.operators button {
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.operators .aqua__theme {
+  background-color: aqua;
+  color: var(--dark);
+}
+
+.operators .red__theme {
+  background-color: red;
+}
+
+.operators .purple__theme {
+  background-color: purple;
+}
+
+.operators .green__theme {
+  background-color: green;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+}
