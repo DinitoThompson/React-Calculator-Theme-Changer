@@ -1,5 +1,5 @@
 /* eslint-disable no-eval */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [calc, setCalc] = useState("");
@@ -46,6 +46,10 @@ function App() {
     }
     return digits;
   };
+
+  useEffect(() => {
+    alert("Welcome To The Calculator Theme Changer. ()>_<)");
+  });
 
   return (
     <div className={pageMode}>
